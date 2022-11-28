@@ -5,7 +5,7 @@
 3. [How Containers Work](#how-containers-work)
 4. [Local installation](#local-installation)
 5. Sample Example
-6. [FAQ]{#faq}
+6. [FAQ](#faq)
 
 ## What is Docker
 Docker helps you create a package of your application along with its all possible dependencies required to run that application.
