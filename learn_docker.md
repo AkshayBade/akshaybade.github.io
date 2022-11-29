@@ -46,11 +46,11 @@ https://docs.docker.com/desktop/install/ubuntu/#install-docker-desktop
 ## Sample Example
 Run hello world image on docker.
 1. Start docker daemon
-```
+```console
 sudo dockerd
 ```
 2. Run hello world image
-```
+```console
 $ sudo docker run hello-world
 
 Hello from Docker!
@@ -64,29 +64,22 @@ To generate this message, Docker took the following steps:
     executable that produces the output you are currently reading.
  4. The Docker daemon streamed that output to the Docker client, which sent it
     to your terminal.
-
-To try something more ambitious, you can run an Ubuntu container with:
- $ docker run -it ubuntu bash
-
-Share images, automate workflows, and more with a free Docker ID:
- https://hub.docker.com/
-
-For more examples and ideas, visit:
- https://docs.docker.com/get-started/
-
+.
+.
+.
 $
 ```
 
 ## Basic operations
 #### Check locally available images
-```
+```console
 $ docker image ls
 REPOSITORY    TAG       IMAGE ID       CREATED         SIZE
 hello-world   latest    feb5d9fea6a5   14 months ago   13.3kB
 $
 ```
 #### pull image
-```
+```console
 $ docker pull redis
 Using default tag: latest
 latest: Pulling from library/redis
@@ -107,18 +100,18 @@ hello-world   latest    feb5d9fea6a5   14 months ago   13.3kB
 $
 ```
 #### Check Running Containers
-```
+```console
 $ sudo docker ps
 CONTAINER ID   IMAGE     COMMAND                  CREATED          STATUS          PORTS      NAMES
 9e889699203c   redis     "docker-entrypoint.s…"   47 seconds ago   Up 46 seconds   6379/tcp   determined_hellman
 $
 ```
 Docker containers can make run in detached mode with below cmd
-```
+```console
 $ sudo docker run -d redis
 ```
 #### Stop container
-```
+```console
 $ sudo docker stop <CONTAINER_ID>
 $ sudo docker stop 9e889699203c
 $ sudo docker ps
@@ -130,7 +123,7 @@ $ sudo docker start 9e889699203c
 $
 ```
 #### See list of running + non-running containers
-```
+```console
 $ sudo docker ps -a
 CONTAINER ID   IMAGE         COMMAND                  CREATED          STATUS                      PORTS      NAMES
 9e889699203c   redis         "docker-entrypoint.s…"   6 minutes ago    Up 6 minutes                6379/tcp   determined_hellman
@@ -142,7 +135,7 @@ $
 #### Access Running container services
 #### Port binding
 I need to bind the running container port with server/host port to make it accessible outside container.
-```
+```console
 $ sudo docker run -d -p6000:6379 redis
 $
 $ docker ps
@@ -153,13 +146,13 @@ $
 
 ### Debug commands
 #### Check logs for container
-```
+```console
 $ docker logs <CONTAINER_ID>
 $ docker logs dd28f2513189
 ```
 
 #### Get inside container file system
-```
+```console
 # docker exec -it dd28f2513189 /bin/bash
 root@dd28f2513189:/data# cd ..
 root@dd28f2513189:/# ls
