@@ -1,6 +1,7 @@
+...
 defaults:
   theme: Hacker
   layout: page
-
-title: AkshayBade Learn Blog
-description: Bookmark this to keep an eye on my project updates!
+  title: TechDeep Blog
+...
+description: Deep dive in to cutting edge technologies!
