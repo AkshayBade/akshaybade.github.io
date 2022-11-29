@@ -7,7 +7,9 @@
 3. [How Containers Work](#how-containers-work)
 4. [Local installation](#local-installation)
 5. [Sample Example](#sample-example)
-6. [FAQ](#faq)
+6. [Basic Operations](#basic-operations)
+7. [Demo Project](learn_docker_demo.md/#setup)
+8. [FAQ](#faq)
 
 ## What is Docker
 Docker helps you create a package of your application along with its all possible dependencies required to run that application.
@@ -26,7 +28,7 @@ Unix namespaces:
 Unix chroot: complete file system comes under docker image. Container adds additional isolation using chroot to this file system.
 
 
-## Local installation (Ubuntu)
+## Local installation
 Install Docker Desktop.
 https://docs.docker.com/desktop/install/ubuntu/
 
@@ -49,7 +51,6 @@ sudo dockerd
 ```
 2. Run hello world image
 ```
-
 $ sudo docker run hello-world
 
 Hello from Docker!
@@ -138,8 +139,8 @@ f0629920ab82   hello-world   "/hello"                 23 hours ago     Exited (0
 $
 ```
 
-## Access Running container services
-### Port binding
+#### Access Running container services
+#### Port binding
 I need to bind the running container port with server/host port to make it accessible outside container.
 ```
 $ sudo docker run -d -p6000:6379 redis
