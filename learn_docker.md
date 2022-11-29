@@ -27,4 +27,5 @@ https://docs.docker.com/desktop/install/ubuntu/#install-docker-desktop
 
 ## FAQ
 1. What is Docker GPG key & why do we need it?
+-> Check docker forum for same: https://forums.docker.com/t/difference-between-docker-desktop-and-docker-engine/124612
 2. How is Docker-desktop different from Docker engine, cli packages?
