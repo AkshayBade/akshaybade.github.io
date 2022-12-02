@@ -5,7 +5,8 @@ Apache OpenWhisk
 1. [What is OpenWhisk](#what-is-openWhisk)
 2. [Why do we need it](#why-do-we-need-it)
 3. How is it different from serverless functions
-4. [FAQ](#faq)
+4. [Setup](#setup)
+5. [FAQ](#faq)
 
 
 ## Terminologies
@@ -45,6 +46,18 @@ It internally uses technologies like,
 
 #### Components
 [Provide usecase diagram]
+
+
+## Setup
+1. Install openwhisk docker compose
+
+```console
+$ git clone https://github.com/apache/openwhisk.git
+$ cd openwhisk
+$ ./gradlew core:standalone:bootRun
+```
+Check http://localhost:3232
+
 
 ## FAQ
 1. How to replay event i OpenWhisk?
