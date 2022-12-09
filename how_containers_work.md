@@ -14,6 +14,9 @@
 
 
 ## Linux Namespaces
+- Provides isolation for processes
+![Kernal process namespace](/assets/images/PID_Namespace.JPG "PID Namespace")
+- 
 
 ### Practical Namespaces
 
