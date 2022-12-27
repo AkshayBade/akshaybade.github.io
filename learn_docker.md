@@ -1,7 +1,32 @@
 ---
 ---
 # Learn Docker
+## Plan 🕙
+- [x]  Basics of Docker
+    - [x]  What is Docker
+    - [ ]  How it works
+- [ ]  Hands-on Docker
+    - [x]  local installation
+    - [ ]  ways of installation
+        - [ ]  docker engine
+        - [ ]  docker desktop
+        - [ ]  sudoer
+    - [ ]  basic commands
+        - [ ]  running existing docker image
+        - [ ]  monitoring
+- [ ]  Advance Docker
+    - [ ]  Docker Compose
+    - [ ]  Multi-container application
+    - [ ]  Docker for CI CD
+    - [ ]  Docker in production
+- [ ]  Own Docker image
+    - [ ]  Dockerfile concepts
+    - [ ]  Hands-on
+- [ ]  Co-tech
+    - [ ]  Kubernetes
+    - [ ]  Argo
 
+## Index
 1. [What is Docker](#what-is-docker)
 2. [Why to use Docker](#why-to-use-docker)
 3. [How Containers Work](#how-containers-work)
