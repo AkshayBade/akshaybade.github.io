@@ -15,7 +15,9 @@
 
 ## Linux Namespaces
 - Provides isolation for processes
+
 ![Kernal process namespace](/assets/images/PID-Namespace.jpg "PID Namespace")
+
 - Partitions kernel resources per namespace
 - Gives look and feel of a complete VM
 
