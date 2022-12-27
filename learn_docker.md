@@ -4,14 +4,14 @@
 ## Plan 🕙
 - [x]  Basics of Docker
     - [x]  What is Docker
-    - [ ]  How it works
+    - [x]  How it works
 - [ ]  Hands-on Docker
     - [x]  local installation
     - [ ]  ways of installation
         - [ ]  docker engine
         - [ ]  docker desktop
-        - [ ]  sudoer
     - [ ]  basic commands
+        - [x]  rootless
         - [ ]  running existing docker image
         - [ ]  monitoring
 - [ ]  Advance Docker
@@ -45,17 +45,17 @@ This solves problems like,
 2. No need to spend redundant efforts of setting up development infra like installing softwares needed to run your application on local along with compatible versions and OS compatibility.
 3. Package with all needed configurations
 4. Multiple applications can now run in their own containerized environment without conflicting with other applications and their softwares dependencies
-5. Makes Deployments faster by removing redundancy of following same installations steps on every environment.
-6. 
+5. Makes Deployments faster by removing redundancy of following same installations steps on every environment. 
 
 ## How Containers Work
-Unix namespaces:
-Unix chroot: complete file system comes under docker image. Container adds additional isolation using chroot to this file system.
+- Unix namespaces: [Linux namespaces](how_containers_work.md)
+- Unix chroot: complete file system comes under docker image. Container adds additional isolation using chroot to this file system.
 
 
 ## Local installation
-Install Docker Desktop.
+### Install Docker Desktop.
 https://docs.docker.com/desktop/install/ubuntu/
+
 
 ## Terminologies
 #### Docker daemon
@@ -69,6 +69,9 @@ https://docs.docker.com/desktop/install/ubuntu/#install-docker-desktop
 
 
 ## Sample Example
+### Rootless daemon
+👷 WIP
+
 Run hello world image on docker.
 1. Start docker daemon
 ```console
