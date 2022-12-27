@@ -74,6 +74,8 @@ root@machine $
 
 
 ## Linux CGroups
+Used for container level resource allocation.
+
 
 ### Practical CGroups
 
