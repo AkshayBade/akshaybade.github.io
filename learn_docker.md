@@ -226,4 +226,6 @@ ba80847af61f   i-mongo   0.36%     156.1MiB / 15.45GiB   0.99%     1.23kB / 0B  
 -> Check docker forum for same: https://forums.docker.com/t/difference-between-docker-desktop-and-docker-engine/124612
 2. How is Docker-desktop different from Docker engine, cli packages?
 -> Combination od daemon, CLI & APIs is called docker engine. It is docker client-server application. Docker Desktop is just way to install docker on Win & Mac. docker-ce (also docker.io / docker)package is for Linux.
-
+3. What standards does Docker follow when it comes to containerization as concept?
+-> OCI :  https://opencontainers.org/about/overview/
+4. 
