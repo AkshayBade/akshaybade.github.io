@@ -5,9 +5,9 @@
 - [x]  Basics of Docker
     - [x]  What is Docker
     - [x]  How it works
-- [ ]  Hands-on Docker
+- [x]  Hands-on Docker
     - [x]  local installation
-        - [ ]  docker engine
+        - [x]  docker engine
         - [x]  docker desktop
     - [x]  basic commands
         - [x]  rootless
