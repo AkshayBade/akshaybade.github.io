@@ -7,13 +7,12 @@
     - [x]  How it works
 - [ ]  Hands-on Docker
     - [x]  local installation
-    - [ ]  ways of installation
         - [ ]  docker engine
-        - [ ]  docker desktop
-    - [ ]  basic commands
+        - [x]  docker desktop
+    - [x]  basic commands
         - [x]  rootless
-        - [ ]  running existing docker image
-        - [ ]  monitoring
+        - [x]  running existing docker image
+        - [x]  monitoring
 - [ ]  Advance Docker
     - [ ]  Docker Compose
     - [ ]  Multi-container application
@@ -31,7 +30,7 @@
 2. [Why to use Docker](#why-to-use-docker)
 3. [How Containers Work](#how-containers-work)
 4. [Local installation](#local-installation)
-5. [Sample Example](#sample-example)
+5. [Sample Example](#handson-docker)
 6. [Basic Operations](#basic-operations)
 7. [Demo Project](learn_docker_demo.md/#setup)
 8. [FAQ](#faq)
@@ -68,9 +67,18 @@ Location at which docker images can be stored and managed for distribution (publ
 https://docs.docker.com/desktop/install/ubuntu/#install-docker-desktop
 
 
-## Sample Example
-### Rootless daemon
-👷 WIP
+## HandsOn Docker
+### Start Docker Daemon
+1. 
+```console
+sudo systemctl enable docker
+sudo systemctl start docker
+```
+2. Rootless daemon: 
+```console
+dockerd-rootless-setup.sh install
+sudo systemctl --user start docker
+```
 
 Run hello world image on docker.
 1. Start docker daemon
@@ -161,7 +169,11 @@ $
 ```
 
 #### Access Running container services
+1. Access outside the container
+2. Access within container
+3. Containers networking
 #### Port binding
+(**Access outside the container**)
 I need to bind the running container port with server/host port to make it accessible outside container.
 ```console
 $ sudo docker run -d -p6000:6379 redis
@@ -171,6 +183,15 @@ CONTAINER ID   IMAGE     COMMAND                  CREATED          STATUS       
 dd28f2513189   redis     "docker-entrypoint.s…"   13 seconds ago   Up 13 seconds   0.0.0.0:6000->6379/tcp, :::6000->6379/tcp   priceless_gauss
 $
 ```
+#### Access within container
+Add this image as part of yours dockerfile and access with localhost:port way.
+
+#### Containers networking
+1. bridge: standalone containers can communicate with each other. Once can create own bridge network to network these containers
+Ref: https://docs.docker.com/network/network-tutorial-standalone/
+2. host: 
+https://docs.docker.com/network/network-tutorial-host/
+
 
 ### Debug commands
 #### Check logs for container
@@ -188,6 +209,16 @@ bin  boot  data  dev  etc  home  lib  lib64  media  mnt  opt  proc  root  run  s
 root@dd28f2513189:/#
 ```
 *** Now since we are inside container, it will not have any of shell commands ready to use since those are not installed for that container.
+
+**Inspect**
+```console
+# docker inspect container_name
+
+# docker stats --no-stream
+CONTAINER ID   NAME      CPU %     MEM USAGE / LIMIT     MEM %     NET I/O       BLOCK I/O       PIDS
+ba80847af61f   i-mongo   0.36%     156.1MiB / 15.45GiB   0.99%     1.23kB / 0B   459kB / 832kB   33
+
+```
 
 ## FAQ
 1. What is Docker GPG key & why do we need it?
