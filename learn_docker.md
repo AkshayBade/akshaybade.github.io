@@ -54,7 +54,8 @@ This solves problems like,
 ## Local installation
 ### Install Docker Desktop.
 https://docs.docker.com/desktop/install/ubuntu/
-
+### Docker engine
+https://docs.docker.com/engine/install/ubuntu/
 
 ## Terminologies
 #### Docker daemon
@@ -224,3 +225,5 @@ ba80847af61f   i-mongo   0.36%     156.1MiB / 15.45GiB   0.99%     1.23kB / 0B  
 1. What is Docker GPG key & why do we need it?
 -> Check docker forum for same: https://forums.docker.com/t/difference-between-docker-desktop-and-docker-engine/124612
 2. How is Docker-desktop different from Docker engine, cli packages?
+-> Combination od daemon, CLI & APIs is called docker engine. It is docker client-server application. Docker Desktop is just way to install docker on Win & Mac. docker-ce (also docker.io / docker)package is for Linux.
+
