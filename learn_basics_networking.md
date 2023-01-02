@@ -8,7 +8,7 @@
     - [x]  SSL/TLS
     - [x]  Proxy
     - [x]  DNS
-    - [ ]  IPTables
+    - [x]  IPTables
     - [ ]  IPVS
     - [ ]  SDN
     - [ ]  Virtual Interfaces
@@ -19,6 +19,7 @@
 - [L4 & L7 network Layers](l4-l7-layers)
 - [SSL/TLS](tls/ssl)
 - [Proxy](proxy)
+- [IPTables](iptables)
 ---
 ### DNS
 - Domain Name System
@@ -84,5 +85,15 @@ Proxy server replaces IP address of receiver and replaces it with another.
 - Block certain websites(servers) by hiding their IP addresses
 - Pretend to be another locations' IP address to access location specific sites.
 
+---
+### IPTables
+A linux concept which controls communication to computer with certain rules.
+There are Three types of chains,
+- Input: control input requests from set of IP addresses
+- Forward: control requests on router system
+- Output: control requests outgoing to certain IP addresses
+Types of policies are like ACCEPT, DROP etc.
+
+---
 
 👷 WORK IN PROGRESS
