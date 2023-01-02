@@ -6,7 +6,7 @@
 - [ ]  Networking Basics
     - [x]  L4 & L7 Layers
     - [x]  SSL/TLS
-    - [ ]  Proxy
+    - [x]  Proxy
     - [x]  DNS
     - [ ]  IPTables
     - [ ]  IPVS
@@ -18,6 +18,7 @@
 - [DNS](dns)
 - [L4 & L7 network Layers](l4-l7-layers)
 - [SSL/TLS](tls/ssl)
+- [Proxy](proxy)
 ---
 ### DNS
 - Domain Name System
@@ -69,5 +70,19 @@ This process depends on TLS version used. dvance versions reduces the handshake 
  - Session key is now for further communication between client & server.
 
 ---
+### Proxy
+Proxy servers are used to hide identity of desired host.
+Proxy server replaces IP address of receiver and replaces it with another.
+**Hardware Proxy Server**: Aphysical proxy server which sits between client & server
+**Software Proxy Server**: Installs on computer which then talks to proxy server (proxy-client)
+
+**Forward Proxy**: Sits next to clients and hides their identity.
+**Reverse Proxy**: Sits next to web server and capable of managing load on server network.
+
+#### Usecases
+- Firewall : Hide IP of computer while communicating over network
+- Block certain websites(servers) by hiding their IP addresses
+- Pretend to be another locations' IP address to access location specific sites.
+
 
 👷 WORK IN PROGRESS
