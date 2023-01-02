@@ -4,8 +4,8 @@
 
 ## Plan 🕙
 - [ ]  Networking Basics
-    - [ ]  L4 & L7 Layers
-    - [ ]  SSL/TLS
+    - [x]  L4 & L7 Layers
+    - [x]  SSL/TLS
     - [ ]  Proxy
     - [x]  DNS
     - [ ]  IPTables
@@ -49,6 +49,24 @@ Browser --> DNS recursive resolver (hosted by Internet Service Provider(ISP) lik
 - Scaling network
 - Application performance -> by selecting best responding server
 - Availablility -> by distributing load across the instances
+
+
+### TLS/SSL
+SSL(Secure Session Layer) is older version of TLS, But certificate is still called SSL certificate.
+
+TLS(Transport Layer Security) is cryptographic protocol to securely communicate over network.
+- Encryption
+- Authentication
+
+> HTTPS = HTTP + TLS
+**TLS Handshake**
+This process depends on TLS version used. dvance versions reduces the handshake hops hence time.
+ > Client --("Clien random", TLS version, supported cipher suites)--> Server --("Server random", SSL certificate, Chosen cipher suite)--> Client
+ > Client --(SSL certificate)--> SSL certificate authority --(Verified Server domain)--> Client
+ > Client --("Master random string" encrypted with public key(part of SSL cert received))--> Server
+ > Client & Server --("client random", server random, master random, public key)--> Session Key
+ 
+ - Session key is now for further communication between client & server.
 
 
 
