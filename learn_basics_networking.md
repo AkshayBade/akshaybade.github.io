@@ -16,9 +16,9 @@
 
 ## Index
 - [DNS](dns)
-- [L4 & L7 network Layers](l4l7 Layers)
-
-
+- [L4 & L7 network Layers](l4-l7-layers)
+- [SSL/TLS](tls/ssl)
+---
 ### DNS
 - Domain Name System
 - All devices conected over internet has its own address called IP Address which is a numeric.
@@ -28,7 +28,7 @@
 Look up IP Address for something.com
 Browser --> DNS recursive resolver (hosted by Internet Service Provider(ISP) like Jio) --> Root Server --> TLD nameserver (Top Level Domain like .com .edu .gov) -> second-level domain server (name of website, here "something") -- (IP Adress) --> Browser -- (IP Adress) --> something server.
 
-
+---
 ### L4 L7 Layers
 **L4 Layer**:
 - Transport layer of OSI model.
@@ -50,7 +50,7 @@ Browser --> DNS recursive resolver (hosted by Internet Service Provider(ISP) lik
 - Application performance -> by selecting best responding server
 - Availablility -> by distributing load across the instances
 
-
+---
 ### TLS/SSL
 SSL(Secure Session Layer) is older version of TLS, But certificate is still called SSL certificate.
 
@@ -68,6 +68,6 @@ This process depends on TLS version used. dvance versions reduces the handshake 
  
  - Session key is now for further communication between client & server.
 
-
+---
 
 👷 WORK IN PROGRESS
