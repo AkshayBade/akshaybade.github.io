@@ -9,7 +9,7 @@
     - [x]  Proxy
     - [x]  DNS
     - [x]  IPTables
-    - [ ]  IPVS
+    - [x]  IPVS
     - [ ]  SDN
     - [ ]  Virtual Interfaces
     - [ ]  Overlay networking
@@ -20,6 +20,7 @@
 - [SSL/TLS](tls/ssl)
 - [Proxy](proxy)
 - [IPTables](iptables)
+- [IPVS](ipvs)
 ---
 ### DNS
 - Domain Name System
@@ -95,5 +96,9 @@ There are Three types of chains,
 Types of policies are like ACCEPT, DROP etc.
 
 ---
+### IPVS
+IP Virtual Server, helps as load balancer at transport layer.
+Runs on LVS --> provides single IP address to all services distributed within cluster of hosts. make services of real servers appear to run under single virtual IP address.
+It is scalable solution over iptables.
 
 👷 WORK IN PROGRESS
