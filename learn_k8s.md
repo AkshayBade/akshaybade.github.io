@@ -10,7 +10,7 @@
     - [x]  Networking Basics
 - [x]  What is Kubernetes
 - [ ]  K8s components
-    - [ ]  pods, nodes, services
+    - [x]  pods, nodes, services
     - [ ]  Kubeconfig
     - [ ]  Objects, Resources
 - [ ]  Local Setup
@@ -39,6 +39,7 @@
 ### How K8s Helps
 - Manage scalability in distributed systems
 - Manage availability
+- Provides vertual network for distributed application for easy management.
 - Manage disaster recovery etc.
 
 ## K8s components
@@ -56,22 +57,23 @@
 - pod is ephemeral in nature, means it dies anytime without recording state / storage etc.
 
 **IP**:
-- Each pod has its own IP address local to node.
+- Each pod has its own IP address internal to K8s cluster.
 
 **Service**:
 - When a pod dies, new pod will have new IP address.
 - In such cases other pods communicating to this with its IP needs to change thier IP URL. This isnt feasible.
-- Service component help avoid this issue. Service is loosely coupled with pod & knows new IP assosiated with its pod and keeps a constant IP address for other pods to connect.
+- Service component help avoid this issue. Service is loosely coupled with pod & knows new IP assosiated with its pod and exposes static IP address for other pods to connect.
+- Service component also acts as load balancer, imagine we have replica of our pod which also connects to same service component. Now Service component receives requests and routes to less busy pod instance.
 
 **Ingress**
-- pods can communicate with each other with their internal services.
+- pods can communicate with each other with their internal services / pods.
 - when pods need to be exposed externally ingress is used.
 
 **Volume**
 - Since pods are ephemeral in nature, data or state is lost when it dies.
 - imagine a DB loosing its data wheb DB pod dies.
 - In such cases k8s needs permanent storage and volume component helps with that.
-- Which can be either local or external storage
+- Which can be either local or remote storage which is connected to K8s cluster
 
 **ConfigMap**
 - Imagine DB URL of DB is changed. Now app pod needs to be changed to accept this change.
