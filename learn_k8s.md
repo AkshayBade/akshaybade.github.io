@@ -83,6 +83,19 @@
 **Secrets**
 - Secrets component is similar to configMap which is only used to store secrets and follows encryption way of storing properties
 
+**Deployment**
+- To manage availability pods are usually replicated in another node of K8s cluster.
+- K8s handles this replica pod creation when given set of instruction on how to create this.
+- Deployment component manages these instructions & as a Dev we just provide this deployment script & K8s takes care of replicating pods as an when needed.
+
+**StatefulSet**
+- Pod replicas generally are stateless.
+- Imagine DB pod, which talks to remote data storage volume which cannot be stateless.
+- This needs additional information about synchronizing state between pod & replicas.
+- StatefulSet component is used to provide such pod creation blueprint.
+- Managing stateful pods is difficult in K8s hence generally avoided.
+
+
 ## Local Setup
 
 ### Minikube
