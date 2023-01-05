@@ -5,10 +5,10 @@
 
 ## Plan 🕙
 - [ ]  Prerequisites
-    - [ ]  What is container
+    - [x]  What is container
     - [ ]  Service Discovery
-    - [ ]  Networking Basics
-- [ ]  What is Kubernetes
+    - [x]  Networking Basics
+- [x]  What is Kubernetes
 - [ ]  K8s Architecture 👎
 - [ ]  Local Setup
     - [ ]  Ways of setup
@@ -27,7 +27,18 @@
     - [ ]  Workflows
 
 ## Index
+- [What is Kubernetes](what-is-kubernetes)
 - [Local Setup](local-setup)
+
+## What is Kubernetes
+
+- A containers (can be any like Docker managed) archestration tool.
+- With rise of microservices & distributed systems, managing all containers has become difficult & K8s helps there.
+
+### How K8s Helps
+- Manage scalability in distributed systems
+- Manage availability
+- Manage disaster recovery etc.
 
 
 ## Local Setup
