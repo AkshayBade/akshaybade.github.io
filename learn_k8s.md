@@ -14,10 +14,10 @@
     - [ ]  Kubeconfig
     - [ ]  Objects, Resources
 - [ ]  Local Setup
-    - [ ]  Ways of setup
+    - [x]  Ways of setup
     - [x]  Minikube
     - [ ]  Cluster
-- [ ]  K8s Architecture 👎
+- [x]  K8s Architecture
 - [ ]  Kubernetes API
     - [ ]  kubectl
 - [ ]  Advance Topics
@@ -29,6 +29,7 @@
 ## Index
 - [What is Kubernetes](what-is-kubernetes)
 - [K8s components](k8s-components)
+- [K8s Architecture](k8s-architecture)
 - [Local Setup](local-setup)
 
 ## What is Kubernetes
@@ -94,6 +95,34 @@
 - This needs additional information about synchronizing state between pod & replicas.
 - StatefulSet component is used to provide such pod creation blueprint.
 - Managing stateful pods is difficult in K8s hence generally avoided.
+
+## K8s Architecture
+K8s is Master slave architecture.
+### Slaves / Nodes
+are worker nodes which hosts pods.
+Worker nodes has 
+
+**Container Runtime** (Docker) to manage containers within pods
+
+**Kubelet**: Process responsible for creating new pods on command from Master nodes.
+Also assigns node resources requested by pod to it.
+
+**Kube Proxy**: Kube proxy acts like request router, load balancer between multiple replicas of pods. It also routes requests to nearest or same node pod to avoid network latency.
+
+### Master Nodes
+Are nodes which controls worker nodes and also manages K8s cluster.
+
+Master nodes again can be replicated on multiple nodes to manage worker nodes and availability.
+Master nodes has 4 processes within,
+
+**API Server**: This acts as a gateway to enter Master node. Requests coming from kubectl, K8s UI or other clients pass through this process. Also acts as authentication to avoid requets coming from untrusted clients.
+
+**Key-Value Store / etcd**: This is a remote data storage across master clusters. This acts like a brain to masters which has entire state of worker nodes, their resouce availability etc.
+
+**Scheduler**: Is responsible to schedule pod creation, it identifies appropriate worker node in cluster with less occupancy and assigns task of pod creation to its kubelet.
+
+**Controller Manager**: Is a process responcible to create a new node, add it to existing worker cluster at runtime, monitor pods within all workers and inform scheduler on pod death.
+
 
 
 ## Local Setup
