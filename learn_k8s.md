@@ -13,13 +13,14 @@
     - [x]  pods, nodes, services
     - [ ]  Kubeconfig
     - [ ]  Objects, Resources
-- [ ]  Local Setup
+- [x]  Local Setup
     - [x]  Ways of setup
     - [x]  Minikube
-    - [ ]  Cluster
+    - [ ]  Cluster 👎
 - [x]  K8s Architecture
-- [ ]  Kubernetes API
-    - [ ]  kubectl
+- [x]  Kubernetes API
+    - [x]  kubectl
+    - [ ]  K8s UI 👎
 - [ ]  Advance Topics
     - [ ]  Networking
     - [ ]  Storage
@@ -33,7 +34,6 @@
 - [Local Setup](local-setup)
 
 ## What is Kubernetes
-
 - A containers (can be any like Docker managed) archestration tool.
 - With rise of microservices & distributed systems, managing all containers has become difficult & K8s helps there.
 
@@ -124,10 +124,12 @@ Master nodes has 4 processes within,
 **Controller Manager**: Is a process responcible to create a new node, add it to existing worker cluster at runtime, monitor pods within all workers and inform scheduler on pod death.
 
 
-
 ## Local Setup
 
 ### Minikube
+Minikube always runs in VM or virtual box & needs a hyperviser to be installed on local.
+Minikube installs both Master and worker processes on same virtual box.
+
 Make sure docker daemon is running.
 - Download linux minikube version
 ```console
@@ -152,5 +154,28 @@ minikube dashboard &
 minikube docker-env
 ```
 
+## Kubectl
+👷 WORK IN PROGRESS
+Kubectl is K8s client / cmd line interface to interact with K8s.
+
+### CRUD
+```console
+kubectl create
+edit
+delete
+```
+### Monitor
+```console
+get pod
+get deployment
+get replicaset
+```
+
+### Debug
+```console
+kubectl logs
+interactive terminal to container running inside pod
+kubectl describe pod
+```
 
 👷 WORK IN PROGRESS
