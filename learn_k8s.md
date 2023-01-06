@@ -11,7 +11,7 @@
 - [x]  What is Kubernetes
 - [ ]  K8s components
     - [x]  pods, nodes, services
-    - [ ]  Kubeconfig
+    - [x]  Kubeconfig
     - [ ]  Objects, Resources
 - [x]  Local Setup
     - [x]  Ways of setup
@@ -96,6 +96,22 @@
 - StatefulSet component is used to provide such pod creation blueprint.
 - Managing stateful pods is difficult in K8s hence generally avoided.
 
+### Kubeconfig
+K8s uses YAML for writing configurations of the processes.
+Any configuration file mainly has 3 sections.
+- Metadata
+- Selector
+- Template
+**Deployment yaml**
+Deployment config provides blueprint for creating pods.
+
+**Service yaml**
+Service yaml creates port binding between pod mentioned in deployment.
+app label is used to map service to corresponding deployment.
+
+**Ingress yaml**
+
+
 ## K8s Architecture
 K8s is Master slave architecture.
 ### Slaves / Nodes
@@ -155,27 +171,41 @@ minikube docker-env
 ```
 
 ## Kubectl
-👷 WORK IN PROGRESS
 Kubectl is K8s client / cmd line interface to interact with K8s.
 
 ### CRUD
 ```console
-kubectl create
-edit
-delete
+# Create new application pod with deployment command
+#Below command creates deployment file with default configs
+kubectl create deployment my-mongo --image=mongo
+kubectl get deployment
+kubectl get pod
+kubectl get replicaset
+
+# Make changes to that deployment file, like increasing replica from default 1 to 2.
+kubectl edit deployment my-mongo
+kubectl get replicaset
+
+# delete pod from K8s cluster
+kubectl delete deployment my-mongo
 ```
+
 ### Monitor
 ```console
-get pod
-get deployment
-get replicaset
+kubectl get deployment
+kubectl get pod
+kubectl get replicaset
 ```
 
 ### Debug
 ```console
-kubectl logs
-interactive terminal to container running inside pod
-kubectl describe pod
+# Check logs of pod
+kubectl logs <POD_NAME>
+# interactive terminal to container running inside pod
+kubectl exec -it <POD_NAME> -- bin/bash
+
+# Get more details of pod , service or deployment
+kubectl describe <POD/DEP/Service>
 ```
 
 👷 WORK IN PROGRESS
