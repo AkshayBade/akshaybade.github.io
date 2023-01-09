@@ -12,6 +12,7 @@
 - [ ]  K8s components
     - [x]  pods, nodes, services
     - [x]  Kubeconfig
+    - [ ]  namespaces
     - [ ]  Objects, Resources
 - [x]  Local Setup
     - [x]  Ways of setup
@@ -110,6 +111,37 @@ Service yaml creates port binding between pod mentioned in deployment.
 app label is used to map service to corresponding deployment.
 
 **Ingress yaml**
+
+### Namespaces
+**Characteristics**</p>
+To group related service pods under common access, resource control namespaces can be used.</p>
+If not mentioned pods are created under namespace called `default`.</p>
+User access can be controlled at NS level.</p>
+Resource allocation like CPU, memory can be contrlled at NS level.</p>
+only services can be accessed across namespaces by mentioning service-name.namespace </p>
+kinds like configmap need to be created by namespaces</p>
+
+**Usecases**:</p>
+Logically group services inside database, monitoring, APIs etc.</p>
+Grouping common resoures like DB, services which can be accessed in difference envs.</p>
+Blue/Green deployent</p>
+Avoid pod overriding: If 2 pods has same name they will override eachother without notice, so team specific NS helps.</p>
+
+```console
+kubectl get namespace
+
+kubectl create namespace <NS_NAME>
+
+kubectl apply -f deployment.yaml -n <NS_NAME>
+
+#Mention NS in deployment -> metadata section, if not mentioned assigned default.
+
+kubectl get service -n <NS_NAME>
+
+#We can change active namespace from default to <NS_NAME> to avoid mentioning this in every ctl command.
+
+kubens
+```
 
 
 ## K8s Architecture
