@@ -7,10 +7,10 @@
 - [x] Install Nginx on Ubuntu
   - [x] Start Nginx as daemon
   - [x] Containerized installation
-- [ ] Basic commands
-- [ ] -h, -v, -t, -s
-- [ ] Serve static webpage
-  - [ ] Reload signal
+- [x] Basic commands
+  - [x] -h, -v, -t, -s
+- [x] Serve static webpage
+  - [x] Reload signal
 
 # Install Nginx on Ubuntu
 
@@ -34,3 +34,36 @@ curl localhost:8087
 ```
 
 Or On browser hit URL localhost:8087
+
+# Basic commands
+**-h**</p>
+Help command.</p>
+
+**-v / -V**</p>
+Version</p>
+**-t / -T**</p>
+Tests confidguration for validity</p>
+**-s**</p>
+signal command takes options like , </p>
+start, stop, quit, reload etc.</p>
+
+
+# Serve static webpage
+webpage configuration are store at `/etc/nginx/conf.d/` directory </p>
+Logs path     : `/var/log/nginx/` </p>
+root location : `/usr/share/nginx/html/`
+
+Store webpages to root location & create config for this inside config dir.
+```console
+#Reload nginx to capture new resources
+# hot load
+nginx -s reload
+
+# Verify
+curl example.com:8081
+
+```
+
+Verify static page is being served.</p>
+On browser hit URL <HOSTNAME>:<PORT>
+
