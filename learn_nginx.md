@@ -11,6 +11,14 @@
   - [x] -h, -v, -t, -s
 - [x] Serve static webpage
   - [x] Reload signal
+- [ ] High-Performance Loadbalancing
+  - [ ] Load balancing methods
+  - [ ] network protocol based LB
+- [ ] Health checks
+  - [ ] Active HC
+  - [ ] Passive HC
+  - [ ] Slow start issue
+
 
 # Install Nginx on Ubuntu
 
