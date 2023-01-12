@@ -11,7 +11,7 @@
   - [x] -h, -v, -t, -s
 - [x] Serve static webpage
   - [x] Reload signal
-- [ ] High-Performance Loadbalancing
+- [x] High-Performance Loadbalancing
   - [ ] Load balancing methods
   - [ ] network protocol based LB
 - [ ] Health checks
@@ -75,3 +75,18 @@ curl example.com:8081
 Verify static page is being served.</p>
 On browser hit URL <HOSTNAME>:<PORT>
 
+# High-Performance Loadbalancing
+Why LB is important?
+Todays world softwares demand high availability & high performance.</p>
+To acheive this, creating multiple copies / instances of your applications is the way. As and when load on the instances increases adding another copy to cluster is the solution which is also called `Horizontal Scaling`.</p>
+Now managing request load between these instances becomes important and solution is called `Load balancer`.</p>
+There are two types of Load balancing technique,</p>
+1. Application Layer LB: Used when LB decisions are to be made based on content of request.
+2. Network Layer / Transport Layer LB: Used when LB decisions are made based on network information present in packets at Network layer.
+
+Nginx serves for Network Layer LB?
+
+How LB Helps?
+- Request routing</p>
+- Server health check</p>
+- Sticky sessions for stateful applications</p>
