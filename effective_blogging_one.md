@@ -1,7 +1,9 @@
 ---
-title: Things to consider while effective blogging
+Things to consider while effective blogging
 ---
 
+
+# Index
 1. [Start With Experience](#start-with-experience)
 2. [Make it turse](#make-it-turse)
 
