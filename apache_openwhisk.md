@@ -55,6 +55,9 @@ It internally uses technologies like,
 $ git clone https://github.com/apache/openwhisk.git
 $ cd openwhisk
 $ ./gradlew core:standalone:bootRun
+
+# Or Run below
+$ openwhisk/bin/wskdev standalone
 ```
 Check http://localhost:3232
 
