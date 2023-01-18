@@ -21,4 +21,4 @@
 ## Tech Evaluation
 9. [Apache Openwhisk](apache_openwhisk.md)
 10. [AWS Glue]
-11. [Keda]
+11. [Keda](learn_keda.md)
