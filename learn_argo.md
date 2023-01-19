@@ -1,6 +1,6 @@
 ---
-Learn Argo
 ---
+# Learn Argo
 
 # Plan
 - [ ] Introduction to Argo
