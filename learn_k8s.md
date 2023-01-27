@@ -4,9 +4,9 @@
 # Kubernetes
 
 ## Plan 🕙
-- [ ]  Prerequisites
+- [x]  Prerequisites
     - [x]  What is container
-    - [ ]  Service Discovery
+    - [x]  Service Discovery
     - [x]  Networking Basics
 - [x]  What is Kubernetes
 - [ ]  K8s components
